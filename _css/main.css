@@ -1,0 +1,909 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Allan:700|Vollkorn|Open+Sans:300italic,600italic,600,300);
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		6;
+	dw-num-cols-tablet:		12;
+	dw-num-cols-desktop:	15;
+	dw-gutter-percentage:	15;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+
+/*TEST IMPLEMENTATION OF DESKTOP STUFF*/
+
+#deskWrapper {
+    display: table;
+    table-layout: fixed;
+    
+    width:100%;
+    height:56px;
+/*    background-color:yellow;*/
+	margin-top:35px;
+	
+	color:white;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	text-align:right;
+	line-height:56px;
+	font-size:1.8em;
+
+}
+#deskWrapper div {
+    display: table-cell;
+    height:56px;
+}
+
+#deskLogo{
+	text-align:left;
+    width:200px;
+	margin-bottom:0;
+	padding:0;
+}
+
+#deskWho {
+	text-align:right;
+/*    background-color:green*/
+}
+#deskWhat {
+	text-align:right;
+/*    background-color:blue*/
+}
+#deskClients {
+	text-align:right;
+/*    background-color:red*/
+}
+#deskContact{
+		text-align:right;
+/*    background-color:purple;*/
+	display:none;
+}
+
+/*END OF DESKTOP STUFF*/
+
+
+/*TEST IMPLEMENTATION OF TABLET STUFF*/
+
+#tabWrapper {
+    display: table;
+    table-layout: fixed;
+    
+    width:100%;
+    height:56px;
+/*    background-color:yellow;*/
+	margin-top:35px;
+	
+	color:white;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	text-align:right;
+	line-height:56px;
+	font-size:1.6em;
+
+}
+#tabWrapper div {
+    display: table-cell;
+    height:56px;
+}
+
+#tabLogo{
+	text-align:left;
+    width:200px;
+	margin-bottom:0;
+	padding:0;
+}
+
+#tabWho {
+	text-align:right;
+/*    background-color:green;*/
+}
+#tabWhat {
+	text-align:right;
+/*    background-color:blue;*/
+}
+#tabClients {
+	text-align:right;
+/*    background-color:red;*/
+}
+#tabContact{
+	
+	color:white;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	text-align:right;
+	line-height:48px;
+	font-size:1.6em;
+	
+	height:40px;
+	width:20%;
+	float:right;
+	margin-right:2%;
+	margin-bottom:-56px;
+	text-align:center;
+	background-image:url(../_img/contact-bg.png);
+	background-repeat:repeat-x;
+	
+}
+
+/*END OF TABLET STUFF*/
+
+
+
+/*TEST IMPLEMENTATION OF MOBILE STUFF*/
+
+#mobWrapper {
+ /*   display: table;*/
+/*    table-layout: fixed;*/
+    
+    width:100%;
+    height:56px;
+	margin-top:34px;
+	
+	color:white;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	text-align:right;
+	line-height:56px;
+	font-size:1.6em;
+
+}
+#mobWrapper div {
+    display: table-cell;
+    height:56px;
+}
+
+#mobLogo{
+	text-align:left;
+    width:200px;
+	margin-bottom:0;
+	padding:0;
+}
+
+#mobNav{
+	color:white;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	text-align:center;
+	line-height:40px;  /*controls height of mobNav*/
+	font-size:1.5em;
+}
+#mobContact{
+	color:white;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	text-align:right;
+	line-height:35px;
+	font-size:1.6em;
+	
+	height:30px;
+	width:24%;
+	float:right;
+	margin-right:2%;
+	margin-bottom:-56px;
+	text-align:center;
+	background-image:url(../_img/contact-bg.png);
+	background-repeat:repeat-x;
+}
+
+#mobWho {
+/*	text-align:right;*/
+/*    background-color:green*/
+}
+#mobWhat {
+/*	text-align:right;*/
+/*    background-color:blue*/
+}
+#mobClients {
+/*	text-align:right;*/
+/*    background-color:red*/
+}
+
+/*END OF MOBILE STUFF*/
+
+
+
+/*SO BEGINS THE MULTIPLE STYLES AND STUFF*/
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 97.826%;
+	padding-left: 1.0869%;
+	padding-right: 1.0869%;
+	clear: none;
+	float: none;
+}
+
+body{
+	font-size: 62.5%;
+	background-image:url(../_img/bg2.png);
+	background-repeat:repeat-x;
+}
+#mobWrapper{
+	margin-top:35px;
+}
+#mobLogo{
+}
+#mobIndicator{
+	font-size:1.2em;
+	margin-top:-56px;
+	float:right;
+	color:#CCD8B1;
+}
+#mobContact{
+	font-size:1.2em;
+	z-index:10000;
+	position: relative;
+}
+#mobContact a{
+	color: inherit;
+	text-decoration: none;
+}
+#mobContact a:hover{
+	color: inherit;
+	text-decoration: underline;
+}
+
+#mobNav{
+	margin-top:60px;
+	z-index:10000;
+	position: relative;
+}
+#mobNav a{
+	color: inherit;
+	text-decoration: none;
+}
+#mobNav a:hover{
+	color: inherit;
+	text-decoration: underline;
+}
+
+#mobWho{
+	float:left;
+	width:33%;
+	clear:none;
+}
+#mobWhat{
+	float:left;
+	width:33%;
+	margin-left:.5%;
+	clear:none;
+}
+#mobClients{
+	float:left;
+	width:33%;
+	margin-left:.5%;
+	clear:none;
+}
+
+#tabWrapper{
+	display:none;
+}
+#tabContact{
+	display:none;
+}
+#tabmsgSpace {
+	display:none;
+}
+#deskWrapper{
+	display:none;
+}
+#mobmsgSpace {
+	position:relative;
+	height:301px;
+	margin-bottom:8px;
+	margin-top:-30px;
+}
+#mobmsgTitle {
+	margin-top:43px;
+	background:#FFC531;
+	width:184px;
+	height:45px;
+}
+#mobmsgTitle p{
+	padding-top:0px;
+	color:#797979;
+	padding-left:26px;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	line-height:50px;
+	font-size:3.0em;
+	margin:0px;
+}
+#mobmsgText {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+}
+#mobmsgText p{
+	color:white;
+/*	padding-left:26px;*/
+	font-family: 'Vollkorn', serif;
+	font-size:1.45em;
+	line-height:1.2;
+}
+#mobmsgGraphic {
+	width: 46.1988%;
+/*	margin-top:20px;*/
+	margin-left: 0.8771%;
+	margin-bottom:0px;
+	position:absolute;
+	right:0;
+	bottom:0;
+	clear: none;
+}
+
+#msgSpace {
+	display:none;
+}
+
+#Content {
+	background:white;
+}
+#articleContent {
+	background:white;
+	width: 100%;
+	clear: both;
+	margin-left: 0;
+}
+#articleContent h1{
+	margin-top:28px;
+	margin-bottom:20px;
+	margin-right:26px;
+	color:#5D5D5D;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	font-size:2.6em;
+}
+#articleContent p{
+	
+	margin-top:0px;
+	margin-bottom:10px;
+	margin-right:26px;
+	color:#000;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:1.3em;
+	line-height:1.0;
+	clear: none;
+
+}
+#articleContent h1, p{
+	margin-left:26px;
+}
+#sideContent {
+	background:white;
+	width: 100%;
+	padding-top:30px;
+	clear: both;
+	margin-left: 0;
+	margin-right:0;
+}
+#sideContent h2 {
+	color:#5D5D5D;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:1.6em;
+	line-height:1.0;
+}
+#sideContent p {
+	color:#000;
+	margin-bottom:21px;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-style:italic;
+	font-size:1.2em;
+	line-height:1.0;
+}
+#sideContent h2, p {
+	margin-left:26px;
+	margin-right:26px;
+}
+#vertDivider {
+	display:none;
+}
+#vertLine {
+}
+#side1 {
+	margin-top:-30px;
+	clear:both;
+	width:100%;
+}
+#side2 {
+	clear: both;
+	width:100%;
+}
+#side3 {
+	clear: both;
+	width:100%;
+}
+#horizDivider {
+	margin-top:10px;
+	height:10px;
+}
+#horizLine {
+	height:1px;
+	width:100%;
+	background:#000;
+}
+#footerContent {
+	margin-top:10px;
+	
+	background-color:rgb(128,158,61);
+	font-family: 'Open Sans', sans-serif;
+	color:white;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 96.9347%;
+	padding-left: 0.5326%;
+	padding-right: 0.5326%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#mobWrapper{
+	display:none;
+}
+#mobContact{
+	display:none;
+}
+#mobNav{
+	display:none;
+}
+
+#tabWrapper{
+	display:table;
+}
+#tabWrapper a{
+	color: inherit;
+	text-decoration: none;
+}
+#tabWrapper a:hover{
+	color: inherit;
+	text-decoration: underline;
+}
+#tabContact{
+	display:block;
+	z-index:10000;
+	position: relative;
+}
+#tabContact a{
+	color: inherit;
+	text-decoration: none;
+}
+#tabContact a:hover{
+	color: inherit;
+	text-decoration: underline;
+}
+#deskWrapper{
+	display:none;
+}
+#mobmsgSpace {
+	display:none;
+}
+#tabmsgSpace {
+	display:block;
+	position:relative;
+	height:290px;
+	margin-bottom:30px;
+	margin-top:-18px;
+}
+#tabmsgTitle {
+	margin-top:43px;
+	background:#FFC531;
+	width:184px;
+	height:45px;
+}
+#tabmsgTitle p{
+	padding-top:0px;
+	color:#797979;
+	padding-left:26px;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	line-height:50px;
+	font-size:3.0em;
+	margin:0px;
+}
+#tabmsgText {
+	width: 52.9239%;
+	margin-left: 0;
+	clear: both;
+}
+#tabmsgText p{
+	color:white;
+	font-family: 'Vollkorn', serif;
+	font-size:1.6em;
+	line-height:1.2;
+}
+#tabmsgGraphic {
+	width: 46.1988%;
+	margin-left: 0.8771%;
+	margin-bottom:0px;
+	position:absolute;
+	right:0;
+	bottom:0;
+	clear: none;
+}
+
+#msgSpace {
+	display:none;
+}
+
+#Content {
+	background:white;
+}
+#articleContent {
+	background:white;
+	width: 100%;
+	clear: both;
+	margin-left: 0;
+}
+#articleContent h1{
+	margin-top:28px;
+	margin-bottom:20px;
+	margin-right:26px;
+	color:#5D5D5D;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	font-size:2.6em;
+}
+#articleContent p{
+	
+	margin-top:0px;
+	margin-bottom:10px;
+	margin-right:26px;
+	color:#000;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:1.3em;
+	line-height:1.0;
+	clear: none;
+}
+#articleContent h1, p{
+	margin-left:26px;
+}
+#sideContent {
+	background:white;
+	width: 100%;
+	padding-top:30px;
+	clear: both;
+	margin-left: 0;
+	margin-right:0;
+}
+#sideContent h2 {
+	color:#5D5D5D;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:1.6em;
+	line-height:1.0;
+}
+#sideContent p {
+	color:#000;
+	margin-bottom:21px;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-style:italic;
+	font-size:1.2em;
+	line-height:1.0;
+}
+#sideContent h2, p {
+	margin-left:26px;
+	margin-right:26px;
+}
+#vertDivider {
+	width: 0.8771%;
+	clear: none;
+	margin:0;
+	
+	background:white;
+	position:relative;
+}
+#vertLine {
+	width:1px;
+	left:50%;
+	background:#808080;
+	margin-top:28px;
+	height:800px;
+	clear: none;
+}
+#side1 {
+	clear:none;
+	width:33%;
+	margin-top:-30px;
+}
+#side2 {
+	clear: none;
+	width:33%;
+	margin-top:-30px;
+	margin-left: 0.5%;
+}
+#side3 {
+	clear: none;
+	width:33%;
+	margin-top:-30px;
+	margin-left: 0.5%;
+	margin-right:0;
+}
+#horizDivider {
+	height:10px;
+}
+#horizLine {
+	height:1px;
+	width:100%;
+	background:#000;
+}
+#footerContent {
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+
+
+/*THIS DESKTOP LAYOUT IS PERFECT LEAVE ALONE DUDE PLS*/
+/*I MEAN IT LEAVE IT ALONE*/
+
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 79.3043%;
+	max-width: 980px;
+	padding-left: 0.3478%;
+	padding-right: 0.3478%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#mobWrapper{
+	display:none;
+}
+#mobContact{
+	display:none;
+}
+#mobNav{
+	display:none;
+}
+
+#tabWrapper {
+	display:none;
+}
+#tabContact {
+	display:none;
+}
+#tabmsgSpace {
+	display:none;
+}
+
+#deskWrapper {
+	display:table;
+	font-size:2.0em;
+	z-index:10000;
+	position: relative;
+}
+#deskWrapper a{
+	color: inherit;
+	text-decoration: none;
+}
+#deskWrapper a:hover{
+	color: inherit;
+	text-decoration: underline;
+}
+
+#msgSpace {
+	display:block;
+	position:relative;
+	height:272px;
+	margin-bottom:29px;
+	margin-top:0px;
+}
+#msgTitle {
+	margin-top:43px;
+	background:#FFC531;
+	width:184px;
+	height:56px;
+}
+#msgTitle p{
+	padding-top:0px;
+	color:#797979;
+	padding-left:26px;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	line-height:56px;
+	font-size:3.6em;
+	margin:0px;
+}
+#msgText {
+	width: 52.9239%;
+	margin-left: 0;
+	clear: both;
+}
+#msgText p{
+	color:white;
+	font-family: 'Vollkorn', serif;
+	font-size:1.75em;
+	line-height:1.2;
+}
+#msgGraphic {
+	width: 46.1988%;
+	margin-left: 0.8771%;
+	margin-bottom:0px;
+	position:absolute;
+	right:0;
+	bottom:0;
+	clear: none;
+}
+#Content {
+	background:white;
+}
+#articleContent {
+	background:white;
+	width: 66.3742%;
+	clear: both;
+	margin-left: 0;
+}
+#articleContent h1{
+	margin-top:28px;
+	margin-bottom:20px;
+	margin-right:26px;
+	color:#5D5D5D;
+	font-family: 'Allan', cursive;
+	font-weight:700;
+	font-size:2.6em;
+}
+#articleContent p{
+	
+	margin-top:0px;
+	margin-bottom:10px;
+	margin-right:26px;
+	color:#000;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:1.3em;
+	line-height:1.0;
+	clear: none;
+}
+#articleContent h1, p{
+	margin-left:26px;
+}
+#sideContent {
+	background:white;
+	width: 32.7485%;
+	padding-top:70px;
+	float:right;
+	clear: none;
+	margin-left: 0;
+}
+#sideContent h2 {
+	color:#5D5D5D;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:1.6em;
+	line-height:1.0;
+}
+#sideContent p {
+	color:#000;
+	margin-bottom:21px;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-style:italic;
+	font-size:1.2em;
+	line-height:1.0;
+}
+#sideContent h2, p {
+	margin-left:26px;
+	margin-right:26px;
+}
+#vertDivider {
+	display:block;
+	width: 0.8771%;
+	clear: none;
+	margin:0;
+	
+	background:white;
+	position:relative;
+}
+#vertLine {
+	width:1px;
+	left:50%;
+	background:#808080;
+	margin-top:28px;
+	height:800px;
+	clear: none;
+}
+#side1 {
+	clear:both;
+	width:100%;
+	margin-top:0;
+}
+#side2 {
+	clear:both;
+	width:100%;
+	margin-top:0;
+	margin-left: 0;
+}
+#side3 {
+	clear:both;
+	width:100%;
+	margin-top:0;
+	margin-left: 0;
+}
+#horizDivider {
+}
+#horizLine {
+}
+#footerContent {
+}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}
